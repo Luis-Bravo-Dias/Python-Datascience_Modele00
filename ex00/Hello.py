@@ -6,13 +6,15 @@ ft_dict = {"Hello" : "titi!"}
 #your code here
 ft_list[1] = "World!"
 
-list_tuple = list(ft_tuple)
-list_tuple[1] = "Portugal!"
-ft_tuple = tuple(list_tuple)
+#list_tuple = list(ft_tuple)
+#list_tuple[1] = "Portugal!"
+#ft_tuple = tuple(list_tuple)
+ft_tuple = (ft_tuple[0], "Portugal!")
 
-ft_set.clear()
-ft_set.add("Lisbon!")
-ft_set.add("Hello")
+#ft_set.clear()
+#ft_set.add("Lisbon!")
+#ft_set.add("Hello")
+ft_set = {"Hello", "Lisbon!"}
 
 ft_dict["Hello"] = "42Lisboa!"
 
