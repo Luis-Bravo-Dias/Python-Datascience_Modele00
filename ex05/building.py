@@ -1,8 +1,11 @@
 import sys
 
-def main():
-	argc = len(sys.argv)
-	string = ""
+def print_count(str):
+	"""
+	Displays the sums of total characters, upper-case characters, lower-case characters,
+	punctuation characters, digits and spaces of a string that receives as an argument.
+	"""
+	string = str
 	upper_letters = 0
 	lower_letters = 0
 	p_marks = 0
@@ -11,15 +14,6 @@ def main():
 
 	punctuation = ".,;:!?\"'()]{[}-"
 
-	if (argc > 1):
-		try:
-			assert argc == 2,"AssertionError: more than one argument is provided"
-			string = sys.argv[1]
-		except AssertionError as error:
-			print(error)
-	else:
-		print("What is the text to count?...")
-		string = input()
 	for char in range(len(string)):
 		if string[char].isupper():
 			upper_letters += 1
@@ -38,6 +32,20 @@ def main():
 	print(p_marks, "punctuation marks")
 	print(spaces, "spaces")
 	print(digits, "digits")
+
+
+def main():
+	argc = len(sys.argv)
+
+	if (argc > 1):
+		try:
+			assert argc == 2,"AssertionError: more than one argument is provided"
+			print_count(sys.argv[1])
+		except AssertionError as error:
+			print(error)
+	else:
+		print("What is the text to count?...")
+		print_count(input())
 
 		
 
