@@ -1,10 +1,11 @@
 import sys
 
 
-def main():
-    argc = len(sys.argv)
-    as_error = "AssertionError: the arguments are bad"
-    NESTED_MORSE = { " ": "/ ",
+def decoder(msg: str):
+    """
+    Takes a string and returns the translation to morse code
+    """
+    NESTED_MORSE = {" ": "/ ",
                     "A": ".- ",
                     "B": "-...",
                     "C": "-.-.",
@@ -41,10 +42,21 @@ def main():
                     "8": "---..",
                     "9": "----.",
                     "0": "-----"
-                   }
+                    }
+    up_msg = msg.upper()
+    code = ""
 
+    for char in up_msg:
+        code += NESTED_MORSE.get(char, "")
+    return (code)
+
+
+def main():
+    argc = len(sys.argv)
+    as_error = "AssertionError: the arguments are bad"
     try:
         assert argc == 2, as_error
+        print(decoder(sys.argv[1]))
     except AssertionError as error:
         print(error)
 
