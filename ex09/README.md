@@ -1,0 +1,59 @@
+# ft_package
+
+---
+
+ft_package is a Python 3 package which contains some functions from module 00 of the Python Piscine for Data Science
+
+## Functions
+
+print_count:
+
+```
+    print_count(str):
+
+    Displays the sums of total characters, upper-case characters,
+    lower-case characters, punctuation characters,
+    digits and spaces of a string that receives as an argument.
+```
+
+ft_filter:
+
+```
+    ft_filter(function, iterable):
+
+    filter(function or None, iterable) --> filter object
+
+    Return an iterator yielding those items of iterable for which function(item)
+    is true. If function is None, return the items that are true.
+
+```
+
+
+decoder:
+
+```
+    decoder(msg: str):
+
+    Takes a string and returns the translation to morse code
+
+```
+
+ft_tqdm:
+
+```
+    ft_tqdm(lst: range) -> None:
+
+    Decorate an iterable object, returning an iterator which acts exactly
+    like the original iterable, but prints a dynamically updating
+    progressbar every time a value is requested.
+
+```
+
+count_in_list:
+
+```
+    count_in_list(lst: list, element):
+
+    Return how many times 'element' appears in 'lst'.
+
+```
