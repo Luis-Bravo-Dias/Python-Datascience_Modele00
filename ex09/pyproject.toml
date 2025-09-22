@@ -2,9 +2,6 @@
 requires = ["setuptools >= 77.0.3"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools]
-package-dir = {"" = "src"}
-
 [tool.setuptools.packages.find]
 where = ["src"]
 
@@ -12,7 +9,8 @@ where = ["src"]
 name = "ft_package"
 version = "0.0.1"
 authors = [
-  { name="lleiria-", email="lleiria-@student.42lisboa.com" },
+  { name = "lleiria-"}, 
+  {email = "lleiria-@student.42lisboa.com" },
 ]
 description = "A small package with this module functions"
 readme = "README.md"
@@ -21,5 +19,8 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
 ]
-license = "MIT"
-license-files = ["LICENSE"]
+
+license = {text = "MIT"}
+
+[project.urls]
+"Home-page" = "https://github.com/lleiria-/ft_package"

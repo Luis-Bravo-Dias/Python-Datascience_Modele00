@@ -1,0 +1,11 @@
+pip install ./dist/ft_package-0.0.1.tar.gz
+
+pip install ./dist/ft_package-0.0.1-py3-none-any.whl
+
+rm -rf dist/ build/ *.egg-info
+
+rm -rf dist/ build/ *.egg-info
+
+pip install dist/ft_package-0.0.1-py3-none-any.whl --force-reinstall
+
+pip show ft_package
