@@ -4,7 +4,7 @@ pip install ./dist/ft_package-0.0.1-py3-none-any.whl
 
 rm -rf dist/ build/ *.egg-info
 
-rm -rf dist/ build/ *.egg-info
+python3 -m build
 
 pip install dist/ft_package-0.0.1-py3-none-any.whl --force-reinstall
 
